@@ -15,7 +15,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className='sticky top-0 w-full'>
+          <div className="container mx-auto p-2 flex justify-between items-center">
+            <a className='px-2 py-1 bg-purple-500 rounded text-white hover:bg-purple-600 transition-all' href="https://butlerandhannah.beehiiv.com/subscribe" target='_blank'>Newsletter 🗞️</a>
+            <a className='px-2 py-1 bg-blue-500 rounded text-white hover:bg-blue-600 transition-all' href="">Support 💸</a>
+          </div>
+        </header>
+        <main className="min-h-screen">
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
